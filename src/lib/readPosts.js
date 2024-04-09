@@ -25,6 +25,21 @@ export function getPostBySlug(slug, fields) {
       items[field] = content
     }
 
+    if (field === 'date') {
+      items[field] = new Date(data[field]).toISOString()
+    }
+
+    if (field === 'title') {
+      items[field] = data[field]
+    } 
+    
+    if (field === 'image') {
+      items[field] = data[field]
+    }
+    if (field === 'imageAlt') {
+      items[field] = data[field]
+    }
+
     if (typeof data[field] !== 'undefined') {
       items[field] = data[field]
     }
@@ -36,7 +51,11 @@ export function getPostBySlug(slug, fields) {
 export function getAllPosts(fields = []) {
   const slugs = getPostSlugs()
   const posts = slugs
-    .map((slug) => getPostBySlug(slug, fields))
+    .map((slug) => { 
+      const post = getPostBySlug(slug, fields)
+      post.date = new Date(post.date).toISOString();
+      return post
+    })
     // sort posts by date in descending order
     .sort((post1, post2) => (post1.date > post2.date ? -1 : 1))
   return posts
