@@ -32,6 +32,10 @@ export function getPostBySlug(slug, fields) {
     if (field === 'title') {
       items[field] = data[field]
     } 
+
+    if (field === 'resume') {
+      items[field] = data[field]
+    }
     
     if (field === 'image') {
       items[field] = data[field]
