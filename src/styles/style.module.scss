@@ -1,64 +1,45 @@
 
-@import url('https://fonts.googleapis.com/css2?family=PT+Mono&family=Reddit+Mono:wght@200..900&display=swap');
-.body{
-	font-style: normal;
-}
-
 .Blog{
 	display: flex;
 	margin: auto;
 	max-width: 70%;
 	padding: 20px;
-	overflow-wrap: break-word;
 	flex-direction: column;
 	font-family: "PT Mono", monospace;
-
-	&Title{
-		align-items: center;
-		font-size: 21;
-		display: flex;
-		align-items: center;
-		justify-self: center;
-		flex-direction: column;
-
-		&Name{
-			font-weight: 300;
-			margin: 21px 0;
-		}
-		&Subtitle{
-			font-weight: 200;
-			color: #a4a4a4;
-			margin: 12px 0;
-		}
 	}
 
-	&Headerposts{
-		color: #a4a4a4;
+.BlogHeaderposts{
+		color: var(--light-gray-color);
 		margin: 18px 0;
 		text-align: center;
 	}
 
-	&Description{
+.BlogDescription{
+		margin-top: 1rem;
 		p {
-			margin: 16px 0;
+			padding:  0 0 16px 0;
 			color: #efefef;
+			text-align: justify;
 		}
 	}
 
+
+.Blog{
 	&Content{
-		line-height: 1.6rem;
 
 		&Post{
+			margin-top: 1rem;
+
 			&Header{
 				display: flex;
 
 				a{
 					text-decoration-thickness: 0.2rem;
 					text-underline-offset: 0.2rem;
-					text-decoration-color: #eb4888;
+					text-decoration-color: var(--pink-color);
 				}
 				a:hover{
-					text-decoration-color: #24d05a;
+					text-decoration-color: var(--green-color);
 				}
 				&Title{
 					font-size: 19px;
@@ -68,11 +49,37 @@
 				&Date{
 					padding: 0 12px;
 					font-style: italic;
-					color: #a4a4a4;
+					color: var(--light-gray-color);
 				}
 			}
 			
 		}
 	}
+
 }
 
+.Post{
+	margin: 1rem 0;
+
+	&Date{
+		margin-top: 1rem;
+		color: var(--light-gray-color);
+		font-style: italic;
+	}
+
+	&Title{
+		font-size: 21;
+		text-align: center;
+		text-decoration: underline ;
+		text-decoration-color: var(--purple-color);
+		text-underline-offset: 0.2rem;
+		text-decoration-thickness: 0.2rem;
+
+	}
+}
+
+.PostContent{
+	margin-top: 1rem;
+	word-wrap: break-word;
+	overflow-wrap: break-word;
+}

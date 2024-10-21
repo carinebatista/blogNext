@@ -1,0 +1,30 @@
+
+@import url('https://fonts.googleapis.com/css2?family=PT+Mono&family=Reddit+Mono:wght@200..900&display=swap');
+
+.nav{
+	display: flex;
+	margin: 2rem 0 1rem;
+	gap: 3rem;
+	align-items: center;
+	justify-content: center;
+}
+ 
+.navLink {
+	font-weight: bolder;
+	text-decoration: none;
+	transition: color 0.3s ease;
+
+	&:hover {
+		text-decoration: underline;
+		text-underline-offset: 0.3rem;
+		text-decoration-thickness: 0.2rem;
+		text-decoration-color: var(--green-color);
+	}
+ }
+
+ .active{
+	text-decoration: underline;
+	text-underline-offset: 0.3rem;
+	text-decoration-thickness: 0.2rem;
+	text-decoration-color: var(--pink-color);
+ }

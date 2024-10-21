@@ -1,0 +1,17 @@
+.header{ 
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+}
+
+.title{
+	font-weight: 300;
+	margin: 21px 0;
+}
+
+.subtitle{
+	font-weight: 200;
+	color: var(--light-gray-color);
+	margin: 12px 0;
+}
