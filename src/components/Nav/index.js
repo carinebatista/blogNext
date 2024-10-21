@@ -11,7 +11,7 @@ function Nav() {
 	return (
 	<nav className={style.nav} >
 		 <Link href="/" className={`${style.navLink} ${router.pathname === '/' ? style.active : ''}`} passHref> home</Link>
-		<a  className={`${style.navLink} ${isBlogActive  ? style.active : ''}`} href="/blog"> blog </a>
+		<Link  className={`${style.navLink} ${isBlogActive  ? style.active : ''}`} href="/blog"> blog </Link>
 		<a  className={style.navLink} href="https://github.com/carinebatista"> github </a>
 		<a  className={style.navLink} href="https://x.com/carinebatata"> twitter </a>
 		<a   className={style.navLink} href="https://www.linkedin.com/in/carinebatista/"> linkedin </a>
