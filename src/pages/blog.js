@@ -5,6 +5,7 @@ import Link from 'next/link'
 import { getAllPosts } from '@/lib/readPosts'
 import formattedDate from './../utils/formattedDate'
 import style from './../styles/style.module.scss';
+import Footer from '@/components/Footer'
 
 function blog({posts}) {
   return (
@@ -29,6 +30,7 @@ function blog({posts}) {
         ))}
       </div>
     </div>
+	<Footer/>
 	</div>
   )
 
